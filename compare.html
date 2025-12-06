@@ -7,7 +7,7 @@
 <!-- GOOGLE ADSENSE -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8173211580426362"
      crossorigin="anonymous"></script>
-  <title>X World Clock – All Countries</title>
+  <title>Compare Two Countries – X World Clock</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,49 +26,23 @@
 </header>
 
 <div class="container">
-
-  <h1>🌍 Welcome to X World Clock</h1>
-  <p>Here you can check the current time for every country around the world.</p>
-  
-  <h2>X World Clock – All Countries</h2>
-  <p>Select any country to view its live time:</p>
-
-  <select id="countrySelect" style="padding:10px;width:100%;font-size:16px;"></select>
-
-  <h2 style="margin-top:30px;">Current Time:</h2>
-  <h1 id="countryTime"></h1>
-</div>
-
-
-
-<!-- ⭐ ADD COMPARE TIME SECTION HERE ⭐ -->
-<div class="container">
-
   <h2>Compare Time Between Two Countries</h2>
+  <p>Select any two countries to compare their current time:</p>
 
-  <p style="font-size:16px; color:#555; margin-top:10px;">
-    Want to know the time difference between two places?  
-    Select any two countries from the list below to instantly see their current local times
-    and how many hours apart they are.
-  </p>
-
-  <p style="font-size:15px; color:#666; background:#f0f0f0; padding:10px; border-radius:8px; margin-top:15px;">
-    ✔ Updated live every second  
-    ✔ Works for all countries  
-    ✔ Shows positive or negative time difference  
-  </p>
-
+  <!-- DROPDOWNS -->
+  <label>Select First Country:</label>
   <select id="countryA" style="padding:10px;width:100%;font-size:16px;"></select>
-  <select id="countryB" style="padding:10px;width:100%;font-size:16px;margin-top:15px;"></select>
 
-  <h2 style="margin-top:25px;">Comparison Result:</h2>
-  <h3 id="compareResult"></h3>
+  <label style="margin-top:20px;display:block;">Select Second Country:</label>
+  <select id="countryB" style="padding:10px;width:100%;font-size:16px;"></select>
+
+  <h2 style="margin-top:30px;">Time Comparison:</h2>
+  <div id="compareResult" style="font-size:18px;margin-top:10px;"></div>
 </div>
-
-
 
 <footer>© 2025 WorldClock — All Rights Reserved</footer>
 
+<!-- CMP BANNER -->
 <div id="consent-banner">
   <p>This site uses cookies to improve services and show ads.</p>
   <div class="cmp-buttons">
@@ -80,9 +54,8 @@
 
 <script src="consent.js"></script>
 
-
 <script>
-// 🌍 Country list with time zones
+// SAME COUNTRY LIST USED IN INDEX FILE
 const countryList = {
   "Afghanistan": "Asia/Kabul",
   "Albania": "Europe/Tirane",
@@ -187,65 +160,48 @@ const countryList = {
   "Vietnam": "Asia/Ho_Chi_Minh"
 };
 
-
-// Load options into single-country selector
-const select = document.getElementById("countrySelect");
-for (let country in countryList) {
-  let option = document.createElement("option");
-  option.value = countryList[country];
-  option.textContent = country;
-  select.appendChild(option);
-}
-
-// Update single country clock
-function updateCountryTime() {
-  const timezone = select.value;
-  const now = new Date().toLocaleString("en-US", { timeZone: timezone });
-  document.getElementById("countryTime").innerText = now;
-}
-select.addEventListener("change", updateCountryTime);
-setInterval(updateCountryTime, 1000);
-select.value = "Asia/Kolkata";
-updateCountryTime();
-
-
-// ⭐ Load options for comparison dropdowns ⭐
+// Load dropdowns
 const A = document.getElementById("countryA");
 const B = document.getElementById("countryB");
 
-for (let c in countryList) {
-  A.appendChild(new Option(c, countryList[c]));
-  B.appendChild(new Option(c, countryList[c]));
+for (let country in countryList) {
+  A.add(new Option(country, countryList[country]));
+  B.add(new Option(country, countryList[country]));
 }
 
-// ⭐ Update comparison result ⭐
-function updateCompare() {
-  let tzA = A.value;
-  let tzB = B.value;
+// Function to calculate timestamps correctly
+function getTimeInTZ(zone) {
+  const now = new Date();
+  return new Date(now.toLocaleString("en-US", { timeZone: zone })).getTime();
+}
 
-  let timeA = new Date().toLocaleString("en-US", { timeZone: tzA });
-  let timeB = new Date().toLocaleString("en-US", { timeZone: tzB });
+// Update results
+function updateComparison() {
+  if (!A.value || !B.value) return;
 
-  // Calculate difference properly
-  let now = new Date();
-  let offsetA = new Date(now.toLocaleString("en-US", { timeZone: tzA }));
-  let offsetB = new Date(now.toLocaleString("en-US", { timeZone: tzB }));
+  let zoneA = A.value;
+  let zoneB = B.value;
 
-  let diffHrs = (offsetA - offsetB) / 3600000;
-  diffHrs = diffHrs.toFixed(1);
+  let timeA = new Date().toLocaleString("en-US", { timeZone: zoneA });
+  let timeB = new Date().toLocaleString("en-US", { timeZone: zoneB });
+
+  let tA = getTimeInTZ(zoneA);
+  let tB = getTimeInTZ(zoneB);
+
+  let diffMs = tA - tB;
+  let diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  let diffMinutes = Math.abs(Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60)));
+
+  let sign = diffMs >= 0 ? "+" : "-";
 
   document.getElementById("compareResult").innerHTML = `
-    <b>${A.selectedOptions[0].text}</b>: ${timeA}<br><br>
-    <b>${B.selectedOptions[0].text}</b>: ${timeB}<br><br>
-    <b>Time Difference: ${diffHrs} hours</b>
+    <b>${A.options[A.selectedIndex].text}</b>: ${timeA}<br><br>
+    <b>${B.options[B.selectedIndex].text}</b>: ${timeB}<br><br>
+    <h3>Difference: <b>${sign}${Math.abs(diffHours)} hours ${diffMinutes} minutes</b></h3>
   `;
 }
 
-A.addEventListener("change", updateCompare);
-B.addEventListener("change", updateCompare);
-setInterval(updateCompare, 1000);
-updateCompare();
-
+setInterval(updateComparison, 1000);
 </script>
 
 </body>
