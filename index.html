@@ -9,15 +9,58 @@
      crossorigin="anonymous"></script>
   <title>X World Clock – All Countries</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- ❄️ SNOW CSS -->
+<style>
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Snow container */
+#snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: white;
+  font-size: 14px;
+  opacity: 0.9;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(140px);
+  }
+}
+
+/* Keep header text above snow */
+header h2,
+header nav {
+  position: relative;
+  z-index: 2;
+}
+</style>
+
 </head>
 
 <body>
 
-<header> 
+<header>
+  <div id="snow"></div> 
   <h2>X World Clock</h2>
   <nav>
     <a href="index.html">Home</a>
-    <a href="compare.html">Compare</a>
+    <a href="index.html#compare">Compare</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
@@ -42,7 +85,7 @@
 
 
 <!-- ⭐ ADD COMPARE TIME SECTION HERE ⭐ -->
-<div class="container">
+<div class="container" id="compare">
 
   <h2>Compare Time Between Two Countries</h2>
 
@@ -65,9 +108,224 @@
   <h3 id="compareResult"></h3>
 </div>
 
+<!-- ================== CONTENT SECTION FOR ADSENSE APPROVAL ================== -->
+<div class="container">
+
+  <h2>Welcome to X World Clock</h2>
+  <p>
+    X World Clock is a simple and reliable online tool designed to help users check the current time
+    in countries all around the world. Whether you are a traveler, student, remote worker,
+    business professional, or simply curious about global time differences, this website makes
+    it easy to stay informed.
+  </p>
+
+  <p>
+    Time zones can be confusing, especially when communicating with people in different parts of
+    the world. X World Clock removes that confusion by showing live, accurate local time updates
+    for every supported country in real time.
+  </p>
+
+  <h2>What Is a World Clock?</h2>
+  <p>
+    A world clock is a tool that displays the current local time in different countries and regions
+    across the globe. Because the Earth rotates, different areas experience daylight and nighttime
+    at different moments. To manage this, the world is divided into multiple time zones.
+  </p>
+
+  <p>
+    With a world clock, users can instantly check what time it is in another country without
+    needing to manually calculate hours or worry about time zone differences.
+  </p>
+
+  <h2>How Time Zones Work</h2>
+  <p>
+    The Earth is divided into 24 main time zones, roughly corresponding to the 24 hours in a day.
+    Each time zone usually represents a one-hour difference from Coordinated Universal Time (UTC).
+    Some regions also use half-hour or quarter-hour offsets.
+  </p>
+
+  <p>
+    Time zones help keep daily schedules aligned with daylight hours. Without time zones,
+    global communication, travel, and international business would be extremely difficult.
+  </p>
+
+  <h2>Understanding UTC and GMT</h2>
+  <p>
+    Coordinated Universal Time (UTC) is the primary time standard used worldwide. It is not tied
+    to any specific country and serves as the reference point for all time zones.
+  </p>
+
+  <p>
+    Greenwich Mean Time (GMT) is a time system historically used in the United Kingdom. While GMT
+    and UTC are often the same, UTC is more precise and is now the global standard used for
+    scientific and technical purposes.
+  </p>
+
+  <h2>Daylight Saving Time Explained</h2>
+  <p>
+    Some countries adjust their clocks during certain parts of the year using Daylight Saving Time (DST).
+    This usually involves moving clocks forward by one hour to make better use of daylight during
+    longer summer days.
+  </p>
+
+  <p>
+    Not all countries observe Daylight Saving Time, and the start and end dates vary by region.
+    This makes checking local time manually difficult, which is why a world clock tool is so helpful.
+  </p>
+
+  <h2>Why Use X World Clock?</h2>
+  <p>
+    X World Clock provides live and continuously updated time information using your browser’s
+    built-in time zone data. The time updates automatically every second, ensuring accuracy
+    without requiring manual refresh.
+  </p>
+
+  <ul>
+    <li>✔ Check current time in any country</li>
+    <li>✔ Compare time between two countries</li>
+    <li>✔ Understand time differences instantly</li>
+    <li>✔ Useful for travel, work, study, and meetings</li>
+    <li>✔ Free and easy to use</li>
+  </ul>
+
+  <h2>Who Can Benefit From This Website?</h2>
+  <p>
+    This website is useful for a wide range of users. Students can coordinate online classes,
+    professionals can schedule international meetings, travelers can plan trips, and remote
+    workers can manage work across different time zones.
+  </p>
+
+  <p>
+    Even casual users may find it interesting to explore how time changes around the world in real time.
+  </p>
+
+  <h2>Comparing Time Between Countries</h2>
+  <p>
+    One of the most useful features of X World Clock is the ability to compare time between two
+    different countries. This helps users quickly understand how many hours ahead or behind one
+    country is compared to another.
+  </p>
+
+  <p>
+    This feature is especially helpful for international calls, online interviews, business meetings,
+    and coordinating events across multiple regions.
+  </p>
+
+  <h2>Accuracy and Reliability</h2>
+  <p>
+    X World Clock uses standardized time zone information available in modern web browsers.
+    While we striveаm for accuracy, slight differences may occur depending on device settings,
+    operating systems, or browser configurations.
+  </p>
+
+  <p>
+    For critical or official time-sensitive decisions, users are encouraged to verify time
+    information through official sources.
+  </p>
+
+  <h2>Our Goal</h2>
+  <p>
+    Our goal is to provide a clean, easy-to-use, and informative world time platform that helps
+    users better understand global time differences. We focus on simplicity, clarity, and usefulness
+    for everyone.
+  </p>
+
+  <p>
+    X World Clock will continue to improve by adding more helpful features, improving accuracy,
+    and enhancing the overall user experience.
+  </p>
+
+</div>
+<!-- ================== END CONTENT SECTION ================== -->
 
 
-<footer>© 2025 WorldClock — All Rights Reserved</footer>
+<!-- ================== FAQ SECTION ================== -->
+<div class="container">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <h3>What is X World Clock?</h3>
+  <p>
+    X World Clock is an online tool that shows the current time in countries around the world
+    and allows users to compare time differences easily.
+  </p>
+
+  <h3>How accurate is the time shown?</h3>
+  <p>
+    The time is based on standard time zone data provided by modern browsers.
+    Minor differences may occur depending on device or system settings.
+  </p>
+
+  <h3>Is X World Clock free to use?</h3>
+  <p>
+    Yes, X World Clock is completely free to use and does not require registration.
+  </p>
+
+  <h3>Does this website collect personal data?</h3>
+  <p>
+    No personal data such as names or emails are collected. Anonymous cookies may be used
+    for advertising and analytics purposes.
+  </p>
+
+  <h3>Can I use this website for business or travel planning?</h3>
+  <p>
+    Yes, many users use X World Clock to plan meetings, travel schedules, and international communication.
+  </p>
+</div>
+<!-- ================== END FAQ SECTION ================== -->
+
+
+
+
+<!-- <footer>© 2025 WorldClock — All Rights Reserved</footer> -->
+
+<footer class="site-footer">
+  <!-- Snow inside footer -->
+  <div class="footer-snow"></div>
+
+  <div class="footer-content">
+    <!-- Logo & About -->
+    <div class="footer-box">
+      <img src="xdpotter10.png" alt="X World Clock Logo" class="footer-logo">
+      <p>
+        X World Clock helps you check live time across all countries
+        and compare time zones easily for meetings, travel, and daily use.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="index.html#compare">Compare Time</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-box">
+      <h3>Legal</h3>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+    <!-- Popular Time Zones -->
+    <!-- <div class="footer-box"> -->
+      <div class="footer-col"> 
+  <h3>Popular Countries</h3>
+  <div id="countryLinks"></div>
+      <!-- <h3>Popular Time Zones</h3>
+      <a href="#">India Time</a>
+      <a href="#">USA Time</a>
+      <a href="#">UK Time</a>
+      <a href="#">Australia Time</a> -->
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 X World Clock • All Rights Reserved
+  </div>
+</footer>
+
 
 <div id="consent-banner">
   <p>This site uses cookies to improve services and show ads.</p>
@@ -247,6 +505,114 @@ setInterval(updateCompare, 1000);
 updateCompare();
 
 </script>
+
+<!-- ❄️ SNOW JAVASCRIPT -->
+<script>
+const snowContainer = document.getElementById("snow");
+
+function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.innerHTML = "❄";
+
+  snowflake.style.left = Math.random() * 100 + "%";
+  snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+
+  snowContainer.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, 5000);
+}
+
+setInterval(createSnowflake, 300);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const snowContainer = document.querySelector(".footer-snow");
+  if (!snowContainer) return;
+
+  for (let i = 0; i < 25; i++) {
+    const snow = document.createElement("div");
+    snow.className = "snowflake";
+    snow.textContent = "❄";
+    snow.style.left = Math.random() * 100 + "%";
+    snow.style.fontSize = (10 + Math.random() * 8) + "px";
+    snow.style.animationDuration = (3 + Math.random() * 4) + "s";
+    snowContainer.appendChild(snow);
+  }
+});
+</script>
+
+<script>
+const select = document.getElementById("countrySelect");
+
+// Update time
+function updateCountryTime() {
+  const timezone = select.value;
+  const now = new Date().toLocaleString("en-US", { timeZone: timezone });
+  document.getElementById("countryTime").innerText = now;
+}
+
+// Load countries
+for (let country in countryList) {
+  let option = document.createElement("option");
+  option.value = countryList[country];
+  option.textContent = country;
+  select.appendChild(option);
+}
+
+// 🔗 READ TIMEZONE FROM URL (?tz=)
+const params = new URLSearchParams(window.location.search);
+const tzFromUrl = params.get("tz");
+
+if (tzFromUrl) {
+  select.value = tzFromUrl;
+}
+
+// Update time every second
+updateCountryTime();
+setInterval(updateCountryTime, 1000);
+
+// Default if no URL param
+if (!tzFromUrl) {
+  select.value = "Asia/Kolkata";
+}
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popularCountries = [
+    { name: "India", zone: "Asia/Kolkata" },
+    { name: "USA", zone: "America/New_York" },
+    { name: "UK", zone: "Europe/London" },
+    { name: "Japan", zone: "Asia/Tokyo" },
+    { name: "Australia", zone: "Australia/Sydney" }
+  ];
+
+  const container = document.getElementById("countryLinks");
+  if (!container) return;
+
+  popularCountries.forEach(c => {
+    const a = document.createElement("a");
+    a.href = `index.html?tz=${encodeURIComponent(c.zone)}`;
+    a.textContent = c.name + " Time";
+    a.style.display = "block";
+    a.style.marginBottom = "6px";
+    container.appendChild(a);
+  });
+
+});
+</script>
+
+
+
+
+
 
 </body>
 </html>
