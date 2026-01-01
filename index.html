@@ -10,46 +10,7 @@
   <title>X World Clock – All Countries</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- ❄️ SNOW CSS -->
-<style>
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Snow container */
-#snow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.snowflake {
-  position: absolute;
-  top: -20px;
-  color: white;
-  font-size: 14px;
-  opacity: 0.9;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(140px);
-  }
-}
-
-/* Keep header text above snow */
-header h2,
-header nav {
-  position: relative;
-  z-index: 2;
-}
-</style>
+  
 
 </head>
 
@@ -76,7 +37,8 @@ header nav {
   <h2>X World Clock – All Countries</h2>
   <p>Select any country to view its live time:</p>
 
-  <select id="countrySelect" style="padding:10px;width:100%;font-size:16px;"></select>
+  <h1 id="currentCountry">World Time</h1>
+<select id="countrySelect" style="padding:10px;width:100%;font-size:16px;"></select>
 
   <h2 style="margin-top:30px;">Current Time:</h2>
   <h1 id="countryTime"></h1>
@@ -273,10 +235,6 @@ header nav {
 </div>
 <!-- ================== END FAQ SECTION ================== -->
 
-    <!-- GOOGLE ADSENSE -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8173211580426362"
-crossorigin="anonymous"></script>
-
 
 
 
@@ -312,17 +270,7 @@ crossorigin="anonymous"></script>
       <a href="terms.html">Terms of Service</a>
     </div>
 
-    <!-- Popular Time Zones -->
-    <!-- <div class="footer-box"> -->
-      <div class="footer-col"> 
-  <h3>Popular Countries</h3>
-  <div id="countryLinks"></div>
-      <!-- <h3>Popular Time Zones</h3>
-      <a href="#">India Time</a>
-      <a href="#">USA Time</a>
-      <a href="#">UK Time</a>
-      <a href="#">Australia Time</a> -->
-    </div>
+    
   </div>
 
   <div class="footer-bottom">
@@ -613,6 +561,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const tz = params.get("tz");
+
+  if (!tz) return;
+
+  const select = document.getElementById("timezoneSelect");
+  const title = document.getElementById("currentCountry");
+
+  if (select) {
+    select.value = tz;
+  }
+
+  if (title) {
+    title.textContent = "Current Time in " + tz.replace("_", " ").split("/")[1];
+  }
+
+  // Call your existing update function
+  if (typeof updateCountryTime === "function") {
+    updateCountryTime();
+  }
+});
+</script>
 
 
 
@@ -620,4 +593,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
-
