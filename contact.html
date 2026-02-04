@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- GOOGLE ADSENSE -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8173211580426362"
+          crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Have questions or suggestions for X World Clock? Reach out to our support team for help with global time zone tools, feature requests, or business inquiries.">
+    <meta name="keywords" content="contact world clock, customer support, feedback, business inquiries, X World Clock contact">
+    <link rel="canonical" href="https://xworldclock.netlify.app/contact.html">
+    <title>Contact X World Clock – Get in Touch for Support & Feedback</title>
+    <link rel="stylesheet" href="style.css">
 
-<!-- GOOGLE ADSENSE -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8173211580426362"
-crossorigin="anonymous"></script>
+    <div id="snow"></div>
+    
+<style>
 
-<title>Contact Us – X World Clock</title>
-<link rel="stylesheet" href="style.css">
-<div id="snow"></div>
-
-<!-- <style>
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-
-#snow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
 
 .snowflake {
   position: absolute;
@@ -38,35 +26,22 @@ header {
   animation: fall linear infinite;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(140px);
-  }
-}
 
-
-header h2,
-header nav {
-  position: relative;
-  z-index: 2;
-}
-</style> -->
+</style>
 </head>
-
 <body>
 
 <header>
-  <div id="snow"></div>
-
-  <h2>X World Clock</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#compare">Compare</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h2>X World Clock</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#compare">Compare</a>
+        <a href="about.html">About</a>
+        <a href="BLOG.html">Blogs</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <div class="container">
@@ -103,38 +78,57 @@ header nav {
   <p>
     Thank you for using X World Clock.
   </p>
+  
+    
+    
+    
+    <div class="bottom-buttons">
+        <a href="/index.html" class="btn-main-home">🏠 Return to Main Clock</a>
+    </div>
+</div>
+</div>
 </div>
 
 <footer class="site-footer">
-  <!-- Snow inside footer -->
   <div class="footer-snow"></div>
 
   <div class="footer-content">
-    <!-- Logo & About -->
     <div class="footer-box">
-      <img src="xdpotter10.png" alt="X World Clock Logo" class="footer-logo">
+      <img src="/logo.png" alt="X World Clock Logo" class="footer-logo">
       <p>
         X World Clock helps you check live time across all countries
         and compare time zones easily for meetings, travel, and daily use.
       </p>
     </div>
 
-    <!-- Quick Links -->
     <div class="footer-box">
-      <h3>Quick Links</h3>
-      <a href="index.html">Home</a>
-      <a href="index.html#compare">Compare Time</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+      <h3>Tools</h3>
+      <a href="https://xworldclock.netlify.app">X World Clock</a>
+      
+      <a href="https://xdsecurepassgenerator.netlify.app/">Password Generator</a>
     </div>
 
-    <!-- Legal -->
     <div class="footer-box">
-      <h3>Legal</h3>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+      <h3>Company</h3>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms and Conditions</a>
     </div>
 
+    <div class="footer-box">
+      <h3>Blogs</h3>
+      <a href="/remote-teams.html">Remote Team Apps</a>
+      <a href="/multiple-timezones.html">Multiple Time Zones</a>
+      <a href="/jet-lag-guide.html">Jet Lag Guide</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Connect</h3>
+      <a href="mailto:xdpotter10@gmail.com">📧 Email Support</a>
+      <a href="https://in.linkedin.com/in/harshal-kotwal-235510180" target="_blank">🔗 LinkedIn</a>
+      <a href="https://www.instagram.com/xdpotter10" target="_blank">📸 Instagram</a>
+    </div>
   </div>
 
   <div class="footer-bottom">
@@ -142,71 +136,7 @@ header nav {
   </div>
 </footer>
 
-<!-- ❄️ SNOW JAVASCRIPT -->
-<script>
-const snowContainer = document.getElementById("snow");
-
-function createSnowflake() {
-  const snowflake = document.createElement("div");
-  snowflake.classList.add("snowflake");
-  snowflake.innerHTML = "❄";
-
-  snowflake.style.left = Math.random() * 100 + "%";
-  snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
-
-  snowContainer.appendChild(snowflake);
-
-  setTimeout(() => {
-    snowflake.remove();
-  }, 5000);
-}
-
-setInterval(createSnowflake, 300);
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const snowContainer = document.querySelector(".footer-snow");
-  if (!snowContainer) return;
-
-  for (let i = 0; i < 25; i++) {
-    const snow = document.createElement("div");
-    snow.className = "snowflake";
-    snow.textContent = "❄";
-    snow.style.left = Math.random() * 100 + "%";
-    snow.style.fontSize = (10 + Math.random() * 8) + "px";
-    snow.style.animationDuration = (3 + Math.random() * 4) + "s";
-    snowContainer.appendChild(snow);
-  }
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const popularCountries = [
-    { name: "India", zone: "Asia/Kolkata" },
-    { name: "USA", zone: "America/New_York" },
-    { name: "UK", zone: "Europe/London" },
-    { name: "Japan", zone: "Asia/Tokyo" },
-    { name: "Australia", zone: "Australia/Sydney" }
-  ];
-
-  const container = document.getElementById("countryLinks");
-  if (!container) return;
-
-  popularCountries.forEach(c => {
-    const a = document.createElement("a");
-    a.href = `index.html?tz=${encodeURIComponent(c.zone)}`;
-    a.textContent = c.name + " Time";
-    a.style.display = "block";
-    a.style.marginBottom = "6px";
-    container.appendChild(a);
-  });
-
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

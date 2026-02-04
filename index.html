@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE ADSENSE -->
+    <head>
+      <!-- GOOGLE ADSENSE -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8173211580426362"
      crossorigin="anonymous"></script>
-  <title>X World Clock – All Countries</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="X World Clock - Free tool to check accurate local time for all countries. Compare time zones and stay synchronized globally.">
+    <meta name="keywords" content="world clock, time zone converter, current time, global time, compare time zones">
+    <link rel="canonical" href="https://xworldclock.netlify.app/">
+    <title>X World Clock – Accurate Global Time & Time Zone Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <div id="snow"></div>
+    
+<style>
 
-  
 
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: white;
+  font-size: 14px;
+  opacity: 0.9;
+  animation: fall linear infinite;
+}
+
+
+</style>
 </head>
-
 <body>
 
 <header>
-  <div id="snow"></div> 
-  <h2>X World Clock</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#compare">Compare</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h2>X World Clock</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#compare">Compare</a>
+        <a href="about.html">About</a>
+        <a href="BLOG.html">Blogs</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
-
 <div class="container">
 
   <h1>🌍 Welcome to X World Clock</h1>
@@ -235,42 +252,68 @@
 </div>
 <!-- ================== END FAQ SECTION ================== -->
 
+<div class="container content-section">
+    <h2>Understanding World Time Zones</h2>
+    <p>Managing time across the globe can be complex due to the 24 longitudinal divisions known as time zones. X World Clock helps you navigate these differences instantly. But why do we have time zones?</p>
+    
+    <h3>The History of GMT and UTC</h3>
+    <p>Greenwich Mean Time (GMT) was originally established in 1675 to aid mariners. Today, the world uses Coordinated Universal Time (UTC), which is more precise. When you search for time in London or New York, our tool calculates the offset from UTC to give you the exact second.</p>
 
+    <h3>How Daylight Savings Affects You</h3>
+    <p>Many countries, like the USA and those in the UK, shift their clocks twice a year. This "Spring Forward" and "Fall Back" can cause confusion for international business meetings. Our clock updates automatically to reflect these changes so you never miss a call.</p>
+
+    <h3>Tips for Global Scheduling</h3>
+    <ul>
+        <li><strong>Identify Overlap:</strong> Find hours where both parties are awake (typically 12 PM - 5 PM UTC).</li>
+        <li><strong>Use a Comparison Tool:</strong> Use our <a href="index.html#compare">Compare Page</a> to see the time difference side-by-side.</li>
+        <li><strong>Check for Holidays:</strong> Remember that time zones don't account for local public holidays.</li>
+    </ul>
+</div>
+</div>
 
 
 <!-- <footer>© 2025 WorldClock — All Rights Reserved</footer> -->
 
 <footer class="site-footer">
-  <!-- Snow inside footer -->
   <div class="footer-snow"></div>
 
   <div class="footer-content">
-    <!-- Logo & About -->
     <div class="footer-box">
-      <img src="xdpotter10.png" alt="X World Clock Logo" class="footer-logo">
+      <img src="/logo.png" alt="X World Clock Logo" class="footer-logo">
       <p>
         X World Clock helps you check live time across all countries
         and compare time zones easily for meetings, travel, and daily use.
       </p>
     </div>
 
-    <!-- Quick Links -->
     <div class="footer-box">
-      <h3>Quick Links</h3>
-      <a href="index.html">Home</a>
-      <a href="index.html#compare">Compare Time</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+      <h3>Tools</h3>
+      <a href="https://xworldclock.netlify.app">X World Clock</a>
+      
+      <a href="https://xdsecurepassgenerator.netlify.app/">Password Generator</a>
     </div>
 
-    <!-- Legal -->
     <div class="footer-box">
-      <h3>Legal</h3>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+      <h3>Company</h3>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms and Conditions</a>
     </div>
 
-    
+    <div class="footer-box">
+      <h3>Blogs</h3>
+      <a href="/remote-teams.html">Remote Team Apps</a>
+      <a href="/multiple-timezones.html">Multiple Time Zones</a>
+      <a href="/jet-lag-guide.html">Jet Lag Guide</a>
+    </div>
+
+    <div class="footer-box">
+      <h3>Connect</h3>
+      <a href="mailto:xdpotter10@gmail.com">📧 Email Support</a>
+      <a href="https://in.linkedin.com/in/harshal-kotwal-235510180" target="_blank">🔗 LinkedIn</a>
+      <a href="https://www.instagram.com/xdpotter10" target="_blank">📸 Instagram</a>
+    </div>
   </div>
 
   <div class="footer-bottom">
@@ -291,305 +334,6 @@
 <script src="consent.js"></script>
 
 
-<script>
-// 🌍 Country list with time zones
-const countryList = {
-  "Afghanistan": "Asia/Kabul",
-  "Albania": "Europe/Tirane",
-  "Algeria": "Africa/Algiers",
-  "Andorra": "Europe/Andorra",
-  "Angola": "Africa/Luanda",
-  "Argentina": "America/Argentina/Buenos_Aires",
-  "Armenia": "Asia/Yerevan",
-  "Australia": "Australia/Sydney",
-  "Austria": "Europe/Vienna",
-  "Azerbaijan": "Asia/Baku",
-  "Bahamas": "America/Nassau",
-  "Bahrain": "Asia/Bahrain",
-  "Bangladesh": "Asia/Dhaka",
-  "Belarus": "Europe/Minsk",
-  "Belgium": "Europe/Brussels",
-  "Belize": "America/Belize",
-  "Benin": "Africa/Porto-Novo",
-  "Bhutan": "Asia/Thimphu",
-  "Bolivia": "America/La_Paz",
-  "Bosnia": "Europe/Sarajevo",
-  "Botswana": "Africa/Gaborone",
-  "Brazil": "America/Sao_Paulo",
-  "Brunei": "Asia/Brunei",
-  "Bulgaria": "Europe/Sofia",
-  "Cambodia": "Asia/Phnom_Penh",
-  "Cameroon": "Africa/Douala",
-  "Canada": "America/Toronto",
-  "Chile": "America/Santiago",
-  "China": "Asia/Shanghai",
-  "Colombia": "America/Bogota",
-  "Costa Rica": "America/Costa_Rica",
-  "Croatia": "Europe/Zagreb",
-  "Cuba": "America/Havana",
-  "Cyprus": "Asia/Nicosia",
-  "Czech Republic": "Europe/Prague",
-  "Denmark": "Europe/Copenhagen",
-  "Egypt": "Africa/Cairo",
-  "Estonia": "Europe/Tallinn",
-  "Ethiopia": "Africa/Addis_Ababa",
-  "Finland": "Europe/Helsinki",
-  "France": "Europe/Paris",
-  "Germany": "Europe/Berlin",
-  "Ghana": "Africa/Accra",
-  "Greece": "Europe/Athens",
-  "Hong Kong": "Asia/Hong_Kong",
-  "Hungary": "Europe/Budapest",
-  "Iceland": "Atlantic/Reykjavik",
-  "India": "Asia/Kolkata",
-  "Indonesia": "Asia/Jakarta",
-  "Iran": "Asia/Tehran",
-  "Iraq": "Asia/Baghdad",
-  "Ireland": "Europe/Dublin",
-  "Israel": "Asia/Jerusalem",
-  "Italy": "Europe/Rome",
-  "Japan": "Asia/Tokyo",
-  "Jordan": "Asia/Amman",
-  "Kazakhstan": "Asia/Almaty",
-  "Kenya": "Africa/Nairobi",
-  "Kuwait": "Asia/Kuwait",
-  "Kyrgyzstan": "Asia/Bishkek",
-  "Laos": "Asia/Vientiane",
-  "Latvia": "Europe/Riga",
-  "Lebanon": "Asia/Beirut",
-  "Libya": "Africa/Tripoli",
-  "Lithuania": "Europe/Vilnius",
-  "Luxembourg": "Europe/Luxembourg",
-  "Malaysia": "Asia/Kuala_Lumpur",
-  "Maldives": "Indian/Maldives",
-  "Mexico": "America/Mexico_City",
-  "Mongolia": "Asia/Ulaanbaatar",
-  "Morocco": "Africa/Casablanca",
-  "Myanmar": "Asia/Yangon",
-  "Nepal": "Asia/Kathmandu",
-  "Netherlands": "Europe/Amsterdam",
-  "New Zealand": "Pacific/Auckland",
-  "Nigeria": "Africa/Lagos",
-  "North Korea": "Asia/Pyongyang",
-  "Norway": "Europe/Oslo",
-  "Oman": "Asia/Muscat",
-  "Pakistan": "Asia/Karachi",
-  "Philippines": "Asia/Manila",
-  "Poland": "Europe/Warsaw",
-  "Portugal": "Europe/Lisbon",
-  "Qatar": "Asia/Qatar",
-  "Romania": "Europe/Bucharest",
-  "Russia": "Europe/Moscow",
-  "Saudi Arabia": "Asia/Riyadh",
-  "Singapore": "Asia/Singapore",
-  "South Africa": "Africa/Johannesburg",
-  "South Korea": "Asia/Seoul",
-  "Spain": "Europe/Madrid",
-  "Sri Lanka": "Asia/Colombo",
-  "Sweden": "Europe/Stockholm",
-  "Switzerland": "Europe/Zurich",
-  "Thailand": "Asia/Bangkok",
-  "Turkey": "Europe/Istanbul",
-  "Ukraine": "Europe/Kiev",
-  "UAE": "Asia/Dubai",
-  "UK": "Europe/London",
-  "USA": "America/New_York",
-  "Vietnam": "Asia/Ho_Chi_Minh"
-};
-
-
-// Load options into single-country selector
-const select = document.getElementById("countrySelect");
-for (let country in countryList) {
-  let option = document.createElement("option");
-  option.value = countryList[country];
-  option.textContent = country;
-  select.appendChild(option);
-}
-
-// Update single country clock
-function updateCountryTime() {
-  const timezone = select.value;
-  const now = new Date().toLocaleString("en-US", { timeZone: timezone });
-  document.getElementById("countryTime").innerText = now;
-}
-select.addEventListener("change", updateCountryTime);
-setInterval(updateCountryTime, 1000);
-select.value = "Asia/Kolkata";
-updateCountryTime();
-
-
-// ⭐ Load options for comparison dropdowns ⭐
-const A = document.getElementById("countryA");
-const B = document.getElementById("countryB");
-
-for (let c in countryList) {
-  A.appendChild(new Option(c, countryList[c]));
-  B.appendChild(new Option(c, countryList[c]));
-}
-
-// ⭐ Update comparison result ⭐
-function updateCompare() {
-  let tzA = A.value;
-  let tzB = B.value;
-
-  let timeA = new Date().toLocaleString("en-US", { timeZone: tzA });
-  let timeB = new Date().toLocaleString("en-US", { timeZone: tzB });
-
-  // Calculate difference properly
-  let now = new Date();
-  let offsetA = new Date(now.toLocaleString("en-US", { timeZone: tzA }));
-  let offsetB = new Date(now.toLocaleString("en-US", { timeZone: tzB }));
-
-  let diffHrs = (offsetA - offsetB) / 3600000;
-  diffHrs = diffHrs.toFixed(1);
-
-  document.getElementById("compareResult").innerHTML = `
-    <b>${A.selectedOptions[0].text}</b>: ${timeA}<br><br>
-    <b>${B.selectedOptions[0].text}</b>: ${timeB}<br><br>
-    <b>Time Difference: ${diffHrs} hours</b>
-  `;
-}
-
-A.addEventListener("change", updateCompare);
-B.addEventListener("change", updateCompare);
-setInterval(updateCompare, 1000);
-updateCompare();
-
-</script>
-
-<!-- ❄️ SNOW JAVASCRIPT -->
-<script>
-const snowContainer = document.getElementById("snow");
-
-function createSnowflake() {
-  const snowflake = document.createElement("div");
-  snowflake.classList.add("snowflake");
-  snowflake.innerHTML = "❄";
-
-  snowflake.style.left = Math.random() * 100 + "%";
-  snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
-
-  snowContainer.appendChild(snowflake);
-
-  setTimeout(() => {
-    snowflake.remove();
-  }, 5000);
-}
-
-setInterval(createSnowflake, 300);
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const snowContainer = document.querySelector(".footer-snow");
-  if (!snowContainer) return;
-
-  for (let i = 0; i < 25; i++) {
-    const snow = document.createElement("div");
-    snow.className = "snowflake";
-    snow.textContent = "❄";
-    snow.style.left = Math.random() * 100 + "%";
-    snow.style.fontSize = (10 + Math.random() * 8) + "px";
-    snow.style.animationDuration = (3 + Math.random() * 4) + "s";
-    snowContainer.appendChild(snow);
-  }
-});
-</script>
-
-<script>
-const select = document.getElementById("countrySelect");
-
-// Update time
-function updateCountryTime() {
-  const timezone = select.value;
-  const now = new Date().toLocaleString("en-US", { timeZone: timezone });
-  document.getElementById("countryTime").innerText = now;
-}
-
-// Load countries
-for (let country in countryList) {
-  let option = document.createElement("option");
-  option.value = countryList[country];
-  option.textContent = country;
-  select.appendChild(option);
-}
-
-// 🔗 READ TIMEZONE FROM URL (?tz=)
-const params = new URLSearchParams(window.location.search);
-const tzFromUrl = params.get("tz");
-
-if (tzFromUrl) {
-  select.value = tzFromUrl;
-}
-
-// Update time every second
-updateCountryTime();
-setInterval(updateCountryTime, 1000);
-
-// Default if no URL param
-if (!tzFromUrl) {
-  select.value = "Asia/Kolkata";
-}
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const popularCountries = [
-    { name: "India", zone: "Asia/Kolkata" },
-    { name: "USA", zone: "America/New_York" },
-    { name: "UK", zone: "Europe/London" },
-    { name: "Japan", zone: "Asia/Tokyo" },
-    { name: "Australia", zone: "Australia/Sydney" }
-  ];
-
-  const container = document.getElementById("countryLinks");
-  if (!container) return;
-
-  popularCountries.forEach(c => {
-    const a = document.createElement("a");
-    a.href = `index.html?tz=${encodeURIComponent(c.zone)}`;
-    a.textContent = c.name + " Time";
-    a.style.display = "block";
-    a.style.marginBottom = "6px";
-    container.appendChild(a);
-  });
-
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const params = new URLSearchParams(window.location.search);
-  const tz = params.get("tz");
-
-  if (!tz) return;
-
-  const select = document.getElementById("timezoneSelect");
-  const title = document.getElementById("currentCountry");
-
-  if (select) {
-    select.value = tz;
-  }
-
-  if (title) {
-    title.textContent = "Current Time in " + tz.replace("_", " ").split("/")[1];
-  }
-
-  // Call your existing update function
-  if (typeof updateCountryTime === "function") {
-    updateCountryTime();
-  }
-});
-</script>
-
-
-
-
-
+<script src="script.js"></script>
 </body>
 </html>

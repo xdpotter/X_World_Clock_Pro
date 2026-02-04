@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xworldclock.netlify.app/sitemap.xml
